@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 
-function App(props) {
+function App({name, age}) {//can write props in the () after App and then props.name and props.age below
   return (
     <div className="App">
-      React test app for learning by {props.name}
+      React test app for learning by {name}. Age = {age - 5}
     </div>
   );
 }
