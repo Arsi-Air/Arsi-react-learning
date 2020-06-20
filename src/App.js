@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <strong>Test app</strong>
+      React test app for learning by {props.name}
     </div>
   );
 }
