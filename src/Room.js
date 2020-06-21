@@ -5,14 +5,14 @@ const Room = () => {
     let [isLit, setLit] = useState(true);
     let [isClicks, setClicks] = useState(0);
     let [isTemp, setTemp] = useState(0);
-    const brightness = isLit ? "lit" : "dark";
+    //const brightness = isLit ? "lit" : "dark"; refer to *1* below
     let togLight = () => {
         setLit(!isLit);
         setClicks(++isClicks);
     }
 
-    return(
-        <div className={`room ${brightness}`}>This room is {isLit ? "lit" : "dark"}
+    return(//<div className={`room ${brightness}`}> *1* These can be used together
+        <div className={`room ${isLit ? "lit" : "dark"}`}>This room is {isLit ? "lit" : "dark"}
         <br />
         Number of times toggled light has been pressed: {isClicks}
         <br />
