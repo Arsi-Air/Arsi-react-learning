@@ -4,7 +4,7 @@ import './Room.css';
 const Room = () => {
     let [isLit, setLit] = useState(true);
     let [isClicks, setClicks] = useState(0);
-    let Click = () => {
+    let togLight = () => {
         setLit(!isLit);
         setClicks(++isClicks);
     }
@@ -14,7 +14,7 @@ const Room = () => {
         <br />
         Number of times light has been toggled: {isClicks}
         <br />
-        <button onClick = {Click} > Toggle light</button>
+        <button onClick = {togLight} > Toggle light</button>
         </div>
     );
 }
