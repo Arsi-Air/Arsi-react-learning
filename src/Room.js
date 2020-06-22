@@ -9,19 +9,29 @@ const Room = () => {
         setLit(!isLit);
         setClicks(++isClicks);
     }
+    
+    let onPressLightOn = () => {
+        setLit(true);
+        setClicks(++isClicks);
+    }
+    
+    let onPressLightOff = () => {
+        setLit(false);
+        setClicks(++isClicks);
+    }
 
     return(
         <div className={`room ${isLit ? "lit" : "dark"}`}>
         <h1><center>A {isLit ? "Lit" : "Dark"} Room</center></h1>
         This room is {isLit ? "lit" : "dark"}
         <br />
-        Number of times toggle light has been pressed: {isClicks}
+        Number of times light controls have been pressed: {isClicks}
         <br />
-        <button onClick = {togLight} > Toggle light</button>
+        <button onClick = {togLight}> Toggle light</button>
         <br />
-        <button onClick = {() => {setLit(true)}}>Turn On</button>
+        <button onClick = {onPressLightOn}>Turn On</button>
         <br />
-        <button onClick = {() => {setLit(false)}}>Turn Off</button>
+        <button onClick = {onPressLightOff}>Turn Off</button>
         <br />
         The temperature is {isTemp}
         <br />
