@@ -25,8 +25,8 @@ const Room = () => {
         <br />
         The temperature is {isTemp}
         <br />
-        <button onClick = {() => setTemp(isTemp + 1)}>+</button>
-        <button onClick = {() => setTemp(isTemp - 1)}>-</button>
+        <button onClick = {() => setTemp(++isTemp)}>+</button>
+        <button onClick = {() => setTemp(--isTemp)}>-</button>
         </div>
     );
 }
