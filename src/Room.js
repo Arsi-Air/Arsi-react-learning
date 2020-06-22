@@ -5,7 +5,6 @@ const Room = () => {
     let [isLit, setLit] = useState(false);
     let [isClicks, setClicks] = useState(0);
     let [isTemp, setTemp] = useState(0);
-    //const brightness = isLit ? "lit" : "dark"; refer to *1* below
     let togLight = () => {
         setLit(!isLit);
         setClicks(++isClicks);
